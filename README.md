@@ -31,4 +31,4 @@
 	* Its always better to take the easy way out and explicitly install these , your smart package manager will figure out whether or not these are present or not.
 
 
--> Currently tested on Rpi/Ubuntu/Debian/RHEL.
+* Currently tested on Rpi/Ubuntu/Debian/RHEL.
