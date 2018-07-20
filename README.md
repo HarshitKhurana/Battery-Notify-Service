@@ -20,6 +20,7 @@
 * DEPENDENCIES 
 	
 	* Depends on packages :
+
 				1. espeak 
 
 				2. notify-osd
