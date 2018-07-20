@@ -1,0 +1,22 @@
+
+#!/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+battery_level=`acpi | cut -d":" -f 2 | cut -d"," -f2 | cut -d"%" -f1`
+echo "Battery is $battery_level %"
+
+lowerBound=19
+UpperBound=97
+
+if [[ $battery_level -lt $lowerBound ]]
+then
+	notify-send -u critical "Battery Low" "Plug in the charger, else I will shutdown\n Battery is $battery_level %"
+	espeak -a 200 -k20 -p 1 -g 10 -s 160 "You Lazy moron , I am dying"
+	espeak -a 200 -k20 -p 1 -g 10 -s 160 "Charge me"
+
+elif [[ $battery_level -gt $UpperBound ]]
+then
+	notify-send -u critical "Battery Status" "\nBattery is $battery_level %"
+	espeak -a 200 -k20 -p 1 -g 10 -s 160 "Stop Charging"
+	espeak -a 200 -k20 -p 1 -g 10 -s 160 "You moron want to Overdose me "
+fi
