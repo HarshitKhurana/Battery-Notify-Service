@@ -17,12 +17,15 @@
 	-> One can always the some parameters of the scripts depending on their needs.
 	
 
-* \* DEPENDENCIES 
+* DEPENDENCIES 
 	
-	[*] Depends on packages :
+	* Depends on packages :
 				1. espeak 
+
 				2. notify-osd
+
 				3. acpi
+
 	* Based on your Linux distro these dependencies might be present or might needed to be explicitly installed.
 	* Its always better to take the easy way out and explicitly install these , your smart package manager will figure out whether or not these are present or not.
 
