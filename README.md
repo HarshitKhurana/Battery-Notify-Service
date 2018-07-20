@@ -7,12 +7,13 @@
 
 
 * Battery-Notify : Shell script to get the current battery status , compare with the upper/lower bounds and execute certain instruction depending on the condition.
-	-> Whatever instruction you want to execute you can add/modify here.
-	-> Lower bounds and upper bounds can be changed here. ( Visible in the script)
+
+		-> Whatever instruction you want to execute you can add/modify here.
+		-> Lower bounds and upper bounds can be changed here. ( Visible in the script)
 
 * BatteryNotify.service : A linux service created for notifying users when their battery level hits either the lower bound or the upper bound of the threshold value. 
 
-	-> It further execute the "Battery-Notify" shell script.
+		-> It further execute the "Battery-Notify" shell script.
 	-> The Parameters are self-explanatory.
 	-> One can always the some parameters of the scripts depending on their needs.
 	
