@@ -32,4 +32,8 @@
 	* Require systemd on your linux machine.
 
 * Currently tested on Rpi/Ubuntu/Debian/RHEL.
-* Keep 'BatteryNotifyRonnie.service' in '/etc/systemd/system/' directory.
+* Keep 'BatteryNotifyRonnie.service' in '/etc/systemd/system/' directory and once done reload the systemd via
+		
+		-> sudo systemctl daemon-reload
+		-> sudo systemctl status BatteryNotify.service 
+		-> sudo systemctl enable BatteryNotify.service 
