@@ -2,8 +2,7 @@
 #!/README
 
 * HARSHIT KHURANA
-* 20.07.18ys
-
+* 20.07.18
 
 * Battery-Notify : Shell script to get the current battery status , compare with the upper/lower bounds and execute certain instruction depending on the condition.
 
