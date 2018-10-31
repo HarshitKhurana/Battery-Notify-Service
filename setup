@@ -1,0 +1,24 @@
+#!/bin/bash
+if VERB="$( command -v apt-get )" >/dev/null 2>&1; then
+   echo "Debian-based"
+   apt-get update
+   apt-get install -y espeak notify-osd acpi
+elif VERB="$( command -v yum )" >/dev/null 2>&1; then
+   echo "Modern Red Hat-based"
+   yum install -y espeak acpid
+   echo "You need to install notify-osd manually"
+elif VERB="$( command -v pacman )" >/dev/null 2>&1; then
+   echo "Arch-based"
+   pacman -Sy --noconfirm espeak acpi notify-osd
+else
+   echo "I have no idea what I'm doing." >&2
+   exit 1
+fi
+
+mkdir /root/Scripts
+cp Battery-Notify /root/Scripts
+cp BatteryNotify.service /lib/systemd/system
+systemctl start BatteryNotify
+systemctl enable BatteryNotify
+
+exit $?

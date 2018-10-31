@@ -3,7 +3,7 @@ Description = " Send alerts on low and high Battery "
 
 [Service]
 Type=simple
-ExecStart=/bin/bash $HOME/Scripts/Battery-Notify
+ExecStart=/bin/bash /root/Scripts/Battery-Notify
 Environment="DISPLAY=:0" "XAUTHORITY=$HOME/.Xauthority"
 Restart=always
 RestartSec=3
