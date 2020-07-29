@@ -2,7 +2,9 @@
 #!/README
 
 * HARSHIT KHURANA
+* hkhurana3@gmail.com
 * 20.07.18
+
 
 * Battery-Notify : Shell script to get the current battery status , compare with the upper/lower bounds and execute certain instruction depending on the condition.
 
@@ -28,11 +30,6 @@
 
 	* Based on your Linux distro these dependencies might be present or might needed to be explicitly installed.
 	* Its always better to take the easy way out and explicitly install these , your smart package manager will figure out whether or not these are present or not.
-	* Require systemd on your linux machine.
+
 
 * Currently tested on Rpi/Ubuntu/Debian/RHEL.
-* Keep 'BatteryNotify.service' in '/etc/systemd/system/' directory and once done reload the systemd via
-		
-		-> sudo systemctl daemon-reload
-		-> sudo systemctl status BatteryNotify.service 
-		-> sudo systemctl enable BatteryNotify.service 

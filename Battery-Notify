@@ -15,7 +15,6 @@ then
   if [[ $chargingStatus == " Charging" ]]
   then
     /usr/bin/notify-send -u critical "Battery Low , Charger plugged in"
-    exit 0
   else
     /usr/bin/notify-send -u critical "Battery Low" "Plug in the charger, else I will shutdown\n Battery is $battery_level %"
     espeak -a 200 -k20 -p 1 -g 10 -s 160 "You Lazy moron , I am dying"
@@ -28,3 +27,14 @@ then
 	espeak -a 200 -k20 -p 1 -g 10 -s 160 "Stop Charging"
 	espeak -a 200 -k20 -p 1 -g 10 -s 160 "You moron want to Overdose me "
 fi
+
+
+# Added Memory check, if usage goes beyond 95% it alerts
+ram_upperBound=95
+ram_usage=`free -m | awk 'NR==2{printf "%d", $3*100/$2 }'`
+
+if [[ $ram_usage -gt ram_upperBound ]]
+then
+    /usr/bin/notify-send -u critical "Ram Usage : $ram_usage %"
+fi
+
